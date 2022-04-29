@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passaporte</title>
+</head>
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.3em;
+        background-color: rgb(218, 207, 207);
+
+    }
+</style>
+
+<body>
+    <h1>Verificação de Nacionalidade</h1>
+    Vivendo em <input type="text" id="nac">
+    <input type="button" value="testar">
+    <div id="fala">
+
+    </div>
+
+    <script>
+        var botao = window.document.getElementsByTagName('input')[1]
+        botao.addEventListener('click', mensagem)
+
+        function mensagem() {
+            var pais = window.document.getElementById('nac')
+            var msg  = window.document.getElementById('fala')
+            if (pais.value == 'Brasil') {
+                msg.innerHTML = '<p>Brasileiro? Você já tem autorização para entrar no país.</p>'
+            } else {
+                msg.innerHTML = `Você vem de ${pais.value}? Seja muito bem vindo!`
+            }
+        }
+    </script>
+</body>
+</html>
