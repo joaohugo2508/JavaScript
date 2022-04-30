@@ -18,7 +18,7 @@ function carregar() {
         window.document.body.style.background = '#FD8205'
     } else {
         //BOA NOITE!
-        foto.src = 'noite-mont-pronto.png'
+        foto.src = 'noite-lamp-pronto.png'
         window.document.body.style.background = '#031C3A'
     }
 }
